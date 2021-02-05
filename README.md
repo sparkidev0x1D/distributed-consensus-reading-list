@@ -434,6 +434,8 @@ This section lists papers on Byzantine Fault Tolerance (BFT), often used as the 
 * Byzantizing Paxos by Refinement, DISC 2011 [[acmdl](https://dl.acm.org/citation.cfm?id=2075058),[pdf](https://lamport.azurewebsites.net/tla/byzsimple.pdf)]
   * also see: [Mechanically Checked Safety Proof of a Byzantine Paxos Algorithm](https://lamport.azurewebsites.net/tla/byzpaxos.html)
 * Byzantine Chain Replication, OPODIS 2012 [[pdf](http://www.cs.cornell.edu/home/rvr/newpapers/opodis2012.pdf)]
+* Automatic Reconfiguration for Large-Scale Reliable Storage Systems, TDSC 2012 [[pdf](http://www.pmg.csail.mit.edu/papers/tdsc12.pdf)]
+  * describes an approach to reconfigure BFT systems
 * The Next 700 BFT Protocols, TOCS 2015 [[acmdl](https://dl.acm.org/citation.cfm?id=2658994),[pdf](http://www.vukolic.com/700-Eurosys.pdf)]
 * Consensus in the Age of Blockchains, Unpublished 2017 [[arxiv](https://arxiv.org/abs/1711.03936)]
   * featured in [the morning paper](https://blog.acolyer.org/2018/02/12/sok-consensus-in-the-age-of-blockchains/)
@@ -487,6 +489,7 @@ The following lists contain places to watch for new writings in the field of dis
 * [Slash dev slash null](https://simbo1905.blog)
 * [David Turner](https://davecturner.github.io)
 * [Aleksey Charapko](http://charap.co)
+* [Marc Brooker](http://brooker.co.za/blog/)
 * [The Morning Paper](https://blog.acolyer.org/about/) by [Adrian Colyer](https://twitter.com/adriancolyer)
 * [Hacking, Distributed](http://hackingdistributed.com) by Emin Gün Sirer
 * [All Things Distributed](https://www.allthingsdistributed.com) by [Werner Vogels](https://twitter.com/Werner)
@@ -523,6 +526,7 @@ The following lists contain places to watch for new writings in the field of dis
 * ACM Symposium on Operating Systems Principles (SOSP) [[2019](https://sosp19.rcs.uwaterloo.ca)]
   * Biennial odds only
 * ACM Symposium on Cloud Computing (SoCC) [[2019](https://acmsocc.github.io/2019/)]
+* Conference on Innovative Data Systems Research (CIDR) [[2021](http://cidrdb.org/cidr2021/cfp.html)]
 
 [Dan Tsafrir](http://www.cs.technion.ac.il/~dan/index.html) maintains a useful list of [systems conferences by deadline](http://www.cs.technion.ac.il/~dan/index_sysvenues_deadline.html).
 
@@ -550,3 +554,4 @@ The following lists contain places to watch for new writings in the field of dis
 * IEEE Transactions on Parallel and Distributed Systems (TPDS) [[website](https://www.computer.org/csdl/journal/td)]
 * IEEE Transactions on Computers (TC) [[website](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=12)]
 * IEEE Transactions on Software Engineering [[website](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=32)]
+* Journal of Systems Research (JSys) [[website](http://jsys.org/)]

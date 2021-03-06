@@ -221,6 +221,7 @@ This section lists papers describing implementations of distributed consensus al
 * CORFU: A Distributed Shared Log, TOCS 2013 [[acmdl](https://dl.acm.org/citation.cfm?id=2535930),[pdf](http://www.cs.yale.edu/homes/mahesh/papers/corfumain-final.pdf)]
   * featured in [the morning paper](https://blog.acolyer.org/2017/05/02/corfu-a-distributed-shared-log/)
 * Scalable State-Machine Replication, DSN 2014 [[acmdl](https://dl.acm.org/citation.cfm?id=2672426),[pdf](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6903591)]
+* When Paxos Meets Erasure Code: Reduce Network and Storage Cost in State Machine Replication, HPDC 2014 [[acmdl](https://dl.acm.org/doi/10.1145/2600212.2600218)]
 * In Search of an Understandable Consensus Algorithm (Extended Version), ATC 2014 [[acmdl](https://dl.acm.org/citation.cfm?id=2643666),[pdf](https://raft.github.io/raft.pdf)]
   * featured in [the morning paper](https://blog.acolyer.org/2015/03/12/in-search-of-an-understandable-consensus-algorithm/)
   * aka the RAFT consensus paper
@@ -264,6 +265,7 @@ This section lists papers describing implementations of distributed consensus al
 * Scalog: Seamless Reconfiguration and Total Order in a Scalable Shared Log, NSDI 2020 [[pdf](https://www.usenix.org/system/files/nsdi20-paper-ding.pdf)]
 * Hermes: A Fast, Fault-Tolerant and Linearizable Replication Protocol, ASPLOS 2020 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3373376.3378496),[arxiv](https://arxiv.org/abs/2001.09804)]
 * PigPaxos: Devouring the communication bottlenecks in distributed consensus, Unpublished 2020 [[arxiv](https://arxiv.org/abs/2003.07760)]
+* CRaft: An Erasure-coding-supported Version of Raft for Reducing Storage Cost and Network Cost, FAST 2020 [[pdf](https://www.usenix.org/conference/fast20/presentation/wang-zizhong)]
 
 ### Evaluations of consensus
 This section lists papers describing standalone evaluations of consensus algorithms.

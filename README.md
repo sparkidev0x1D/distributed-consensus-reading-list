@@ -19,6 +19,7 @@ The sections are as follows:
 * [Reconfiguration](#reconfiguration)
 * [Weaker consistency models](#weaker-consistency-models)
 * [Failures](#failures)
+* [Clocks](#clocks)
 * [Correctness of consensus algorithms](#correctness-of-consensus-algorithms)
 * [Quorum systems](#quorum-systems)
 * [Byzantine fault tolerance in distributed consensus](#byzantine-fault-tolerance-in-distributed-consensus)
@@ -37,6 +38,7 @@ This section lists theoretical results relating to distributed consensus.
 * The implementation of reliable distributed multiprocess systems, Computer Networks 1978 [[pdf](https://www.microsoft.com/en-us/research/publication/implementation-reliable-distributed-multiprocess-systems/)]
 * Impossibility of Distributed Consensus with One Faulty Process, JACM 1985 [[acmdl](https://dl.acm.org/citation.cfm?id=214121),[pdf](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)]
   * as known as the FLP result
+* The Byzantine Generals Problem, TPLS 1982 [[acmdl](https://dl.acm.org/doi/10.1145/357172.357176),[pdf](https://www.microsoft.com/en-us/research/uploads/prod/2016/12/The-Byzantine-Generals-Problem.pdf)]
 * On the Minimal Synchronism Needed for Distributed Consensus, JACM 1987 [[acmdl](https://dl.acm.org/citation.cfm?id=7533),[pdf](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.456.4362&rep=rep1&type=pdf)]  
 * Unreliable Failure Detectors for Reliable Distributed Systems, JACM 1996 [[acmdl](https://dl.acm.org/citation.cfm?id=226647),[pdf](https://www.cs.utexas.edu/~lorenzo/corsi/cs380d/papers/p225-chandra.pdf)]
 * The Weakest Failure Detector for Solving Consensus, JACM 1996 [[acmdl](https://dl.acm.org/citation.cfm?id=234549),[pdf](http://www.cs.utexas.edu/~lorenzo/corsi/cs380d/papers/weakestfd.pdf)]
@@ -45,9 +47,8 @@ This section lists theoretical results relating to distributed consensus.
 * The Heard-Of Model: Computing in Distributed Systems with Benign Failures, Distributed Computing 2009 [[acmdl](https://dl.acm.org/citation.cfm?id=3271165),[pdf](https://infoscience.epfl.ch/record/109375/files/HO-TR-2007.pdf)]
   * featured in [the morning paper](https://blog.acolyer.org/2016/02/09/the-heard-of-model/)
 * Virtually Synchronous Methodology for Dynamic Service Replication, MS Tech report 2010 [[pdf](https://www.microsoft.com/en-us/research/wp-content/uploads/2010/11/vs-submit.pdf)]
-* Flexible Paxos: Quorum Intersection Revisited, OPODIS 2016 [[pdf](http://drops.dagstuhl.de/opus/volltexte/2017/7094/pdf/LIPIcs-OPODIS-2016-25.pdf)]
-  * featured in [the morning paper](https://blog.acolyer.org/2016/09/27/flexible-paxos-quorum-intersection-revisited/)
-* Fast Flexible Paxos: Relaxing Quorum Intersection for Fast Paxos, ICDCN 2021 [[arxiv](https://arxiv.org/abs/2008.02671)]
+* CAP Twelve Years Later: How the "Rules" Have Changed, Computer Magazine 2012 [[html](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed/)]
+
 
 ### Surveys
 This section lists surveys, tutorials, book chapters and systemisation of knowledge papers covering distributed consensus algorithms.
@@ -73,6 +74,7 @@ This section lists surveys, tutorials, book chapters and systemisation of knowle
 * On the Parallels between Paxos and Raft, and how to Port Optimizations, PODC 2019 [[acmdl](https://dl.acm.org/citation.cfm?id=3331595),[pdf](http://mpaxos.com/pub/raft-paxos.pdf)]
 * Paxos vs Raft: Have we reached consensus on distributed consensus?, PaPoC 2020 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3380787.3393681),[arxiv](https://arxiv.org/abs/2004.05074)]
 * 60 Years of Mastering Concurrent Computing through Sequential Thinking, SIGACT News 2020 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3406678.3406690)]
+* What's Live? Understanding Distributed Consensus, Unpublished 2020 [[arxiv](https://arxiv.org/abs/2001.04787)]
 
 ### Algorithms for consensus
 This section lists papers describing algorithms for distributed consensus.
@@ -114,7 +116,10 @@ This section lists papers describing algorithms for distributed consensus.
   * extends the idea of master read leases to allow the master to promise to use a specified subset of acceptors in every majority quorum. Acceptors in this quorum can then serve reads locally.
   * similar to master read leases, it relies on clock synchrony.
 * Consus: Taming the Paxi, Unpublished 2016 [[arxiv](https://arxiv.org/abs/1612.03457)]
+* Flexible Paxos: Quorum Intersection Revisited, OPODIS 2016 [[pdf](http://drops.dagstuhl.de/opus/volltexte/2017/7094/pdf/LIPIcs-OPODIS-2016-25.pdf)]
+  * featured in [the morning paper](https://blog.acolyer.org/2016/09/27/flexible-paxos-quorum-intersection-revisited/)
 * CASPaxos: Replicated State Machines without logs, Unpublished 2018 [[pdf](https://arxiv.org/pdf/1802.07000.pdf)]
+* Fast Flexible Paxos: Relaxing Quorum Intersection for Fast Paxos, ICDCN 2021 [[arxiv](https://arxiv.org/abs/2008.02671)]
 * Paxos Made Practical, Unpublished [[pdf](http://www.scs.stanford.edu/~dm/home/papers/paxos.pdf)]
 
 ### Consensus for specialist hardware
@@ -353,6 +358,14 @@ This section lists papers which analyze real-world failures of distributed syste
 * The Inflection Point Hypothesis: A Principled Debugging Approach for Locating the Root Cause of a Failure, SOSP 2019 [[acmdl](https://dl.acm.org/citation.cfm?id=3359650)]
 * Toward a Generic Fault Tolerance Technique for Partial Network Partitioning, OSDI 2020 [[pdf](https://www.usenix.org/system/files/osdi20-alfatafta.pdf)]
 
+### Clocks
+The liveness of distributed consensus depends on some degree of clock synchronization. The following section lists papers on the topic of clock synchronization.
+*  IEEE Standard for a Precision Clock Synchronization Protocol for Networked Measurement and Control Systems, Standard 1588-2008 [[ieee](https://ieeexplore.ieee.org/document/4579760)]
+* Globally Synchronized Time via Datacenter Networks, SIGCOMM 2016 [[acmdl](https://dl.acm.org/doi/10.1145/2934872.2934885),[pdf](http://fireless.cs.cornell.edu/publications/dtp_sigcomm16.pdf)]
+* Exploiting a Natural Network Effect for Scalable, Fine-grained Clock Synchronization, NSDI 2018 [[acmdl](https://dl.acm.org/doi/10.5555/3307441.3307449),[pdf](https://www.usenix.org/conference/nsdi18/presentation/geng)]
+* Sundial: Fault-tolerant Clock Synchronization for Datacenters, OSDI 2020 [[pdf](https://www.usenix.org/system/files/osdi20-li_yuliang.pdf)]
+  * [Useful write up by Aleksey Charapko](http://charap.co/reading-group-sundial-fault-tolerant-clock-synchronization-for-datacenters/)
+
 ### Correctness of consensus algorithms
 This section lists papers on proving or testing the correctness of consensus algorithms.
 * Specifying Systems: The TLA+ Language and Tools for Hardware and Software Engineers, Book 2002 [[acmdl](https://dl.acm.org/citation.cfm?id=579617),[pdf](https://lamport.azurewebsites.net/tla/book-02-08-08.pdf),[website](https://lamport.azurewebsites.net/tla/book.html),[amazon](https://www.amazon.com/Specifying-Systems-Language-Hardware-Engineers/dp/032114306X)]
@@ -504,6 +517,7 @@ The following lists contain places to watch for new writings in the field of dis
 * [Distributed systems theory for the distributed systems engineer](https://www.the-paper-trail.org/post/2014-08-09-distributed-systems-theory-for-the-distributed-systems-engineer/) by [Henry Robinson](https://twitter.com/henryr)
 * [Collective works of Leslie Lamport](http://lamport.azurewebsites.net/pubs/pubs.html)
 * [Paxosmon: Gotta Consensus Them All](https://vadosware.io/post/paxosmon-gotta-concensus-them-all/)
+* [Foundational distributed systems papers](http://muratbuffalo.blogspot.com/2021/02/foundational-distributed-systems-papers.html)
 
 ### Academic conferences & symposiums
 * USENIX Symposium on Networked Systems Design and Implementation (NSDI) [[2019](https://www.usenix.org/conference/nsdi19),[2020](https://www.usenix.org/conference/nsdi20)]

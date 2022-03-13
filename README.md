@@ -540,7 +540,11 @@ This section lists papers on [Byzantine Fault Tolerance](https://en.wikipedia.or
   * New survey paper on BFT, more up-to-date than "Consensus in the Age of Blockchains".
 * DiemBFT v4: State Machine Replication in the Diem Blockchain, White paper 2021
 * Quadratic worst-case message complexity for State Machine Replication in the partial synchrony model, Preprint 2022 [[arxiv](https://arxiv.org/abs/2201.01107)]
-
+* Liveness and Latency of Byzantine State-Machine Replication, Preprint 2022 [[arxiv](https://arxiv.org/pdf/2202.06679.pdf)]
+* Crime and Punishment in Distributed Byzantine Decision Tasks, Preprint 2022 [[arxiv](https://eprint.iacr.org/2022/121)]
+* Dissecting BFT Consensus: In Trusted Components we Trust!, Preprint 2022 [[arxiv](https://arxiv.org/pdf/2202.01354.pdf)]
+* Scalable Byzantine Fault Tolerance via Partial Decentralization, Preprint 2022 [[arxiv](https://arxiv.org/abs/2202.13408)]
+* Byzantine Agreement in Polynomial Time with Near-Optimal Resilience. Preprint 2022 [[arxiv](https://arxiv.org/abs/2202.13452)]
 
 ### Alternative fault models in distributed consensus
 Most of these papers handle crash faults or byzantine faults. This section considers the fault models between crash and byzantine.

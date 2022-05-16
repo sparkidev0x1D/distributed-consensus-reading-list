@@ -219,7 +219,7 @@ This section lists papers describing experiences of deploying distributed consen
   * Widely utilized Apache licensed open source project written in Java [project website](https://zookeeper.apache.org)
   * [Apache Kafka](https://kafka.apache.org) uses Zookeeper, as well as its own replication protocol, by described [here](https://www.confluent.io/blog/distributed-consensus-reloaded-apache-zookeeper-and-replication-in-kafka/). This is no longer true.
   * Architecture is similar to Google's Chubby but unlike Chubby is described in detail and is open source
-  * Writes are linearizable, reads may be stale. Note: calling sync before a write doesn't make it linearizable
+  * Writes are linearizable, reads may be stale. Note: calling sync before a read doesn't make it linearizable
   * Clients may have multiple outstanding requests, they will be handled FIFO
   * Uses primary-backup replication instead of state machine replication
   * Featured in [the morning paper](https://blog.acolyer.org/2015/03/09/zab-high-performance-broadcast-for-primary-backup-systems/)
@@ -445,11 +445,13 @@ This section lists papers on proving or testing the correctness of consensus alg
 * TLA+ model checking made symbolic, OOPSLA 2019 [[acmdl](https://dl.acm.org/doi/10.1145/3360549)]
 * Towards an Automatic Proof of Lamport’s Paxos, FMCAD 2021 [[arxiv](https://arxiv.org/abs/2108.08796)]
   * Automatic inference of Paxos's inductive invariants
-* DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols, OSDI 2021 [[pdf](https://www.usenix.org/system/files/osdi21-yao.pdf)]
+* DistAI: Data-Driven Automated Invariant Learning for Distributed Protocols, OSDI 2021 [[code](https://github.com/VeriGu/DistAI),[pdf](https://www.usenix.org/system/files/osdi21-yao.pdf)]
   * Next step in the inference of inductive invariants for distributed protocols, following on from Ivy and I4. Still does not support Paxos.
 * Much ADO about Failures: A Fault-Aware Model for Compositional Verification of Strongly Consistent Distributed Systems, OOPSLA 2021 [[pdf](https://flint.cs.yale.edu/flint/publications/ado-tr.pdf)]
   * Formal proofs of distributed protocols in Coq including Multi-Paxos, produces verified C executables.
 * Adore: Atomic Distributed Objects with Certified Reconfiguration, PLDI 2022 [[pdf](https://flint.cs.yale.edu/flint/publications/adore.pdf)]
+* Formal Verification of a Distributed Dynamic Reconfiguration Protocol, CCP 2022 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3497775.3503688),[arxiv](https://arxiv.org/abs/2109.11987),[pdf](https://will62794.github.io/assets/papers/cpp22-formal-verification-reconfig.pdf),[code](https://github.com/will62794/logless-reconfig/tree/master]),[talk](https://youtu.be/VwCBlmS7XEA)]
+* Plain and Simple Inductive Invariant Inference for Distributed Protocols in TLA+, Draft 2022 [[pdf](https://will62794.github.io/assets/papers/dist-invariant-inference-tla.pdf)]
 
 ### Quorum systems
 This section lists papers on quorum systems.
@@ -545,6 +547,7 @@ This section lists papers on [Byzantine Fault Tolerance](https://en.wikipedia.or
 * Hardening Cassandra Against Byzantine Failures, OPODIS 2017 [[pdf](http://drops.dagstuhl.de/opus/volltexte/2018/8642/pdf/LIPIcs-OPODIS-2017-27.pdf)]
 * Casper the Friendly Finality Gadget, Tech report 2017 [[arxiv](https://arxiv.org/abs/1710.09437)]
   * Casper FFG, the proposed PoS alternative for [Ethereum](https://ethereum.org/en/) (aka [Eth2](https://ethereum.org/en/eth2/))
+* BFT Protocols Under Fire, NSDI 2008 [[pdf](https://www.usenix.org/legacy/event/nsdi08/tech/full_papers/singh/singh.pdf)]
 * Algorand: A secure and efficient distributed ledger, TCS 2019 [[code](https://github.com/algorand/go-algorand),[pdf](https://www.algorand.com/Algorand_%20A%20secure%20and%20efficient%20distributed%20ledger.pdf)]
   * 2nd of the two Algorand papers
 * HotStuff: BFT Consensus with Linearity and Responsiveness, PODC 2019 [[acmdl](https://dl.acm.org/citation.cfm?id=3331591),[arxiv](https://arxiv.org/abs/1803.05069)]
@@ -672,6 +675,7 @@ They are in no particular order.
 * [Computer and Communications Security (CCS)](http://www.sigsac.org/ccs.html)
 * [USENIX Security](https://www.usenix.org/conference/usenixsecurity22)
 * [Security and Privacy (S&P) / Oakland](https://www.ieee-security.org/TC/SP2023/cfpapers.html)
+* [Certified Programs and Proofs (CCP)](https://popl22.sigplan.org/home/CPP-2022#About)
 
 [Dan Tsafrir](http://www.cs.technion.ac.il/~dan/index.html) maintains a useful list of [systems conferences by deadline](http://www.cs.technion.ac.il/~dan/index_sysvenues_deadline.html).
 

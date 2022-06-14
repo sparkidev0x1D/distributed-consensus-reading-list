@@ -295,6 +295,7 @@ This section lists papers describing implementations of distributed consensus al
   * Latest edition in the line of papers on shared totally-ordered logs: Tango, Corfu, vCorfu, Scalog, Delos
 * Gossip Consensus, Middleware 2021 [[pdf](https://www.inf.usi.ch/faculty/pedone/Paper/2021/middleware2021b.pdf)]
   * Looks at using gossip to reduce communication overhead of Multi-Paxos. An unstructured version of PigPaxos/Canopus. 
+* Baxos: Backing off for Robust and Efficient Consensus, Preprint 2022 [[arxiv](https://arxiv.org/pdf/2204.10934.pdf)]
 
 ### Evaluations of consensus
 This section lists papers describing standalone evaluations of consensus algorithms.
@@ -452,6 +453,7 @@ This section lists papers on proving or testing the correctness of consensus alg
 * Adore: Atomic Distributed Objects with Certified Reconfiguration, PLDI 2022 [[pdf](https://flint.cs.yale.edu/flint/publications/adore.pdf)]
 * Formal Verification of a Distributed Dynamic Reconfiguration Protocol, CCP 2022 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3497775.3503688),[arxiv](https://arxiv.org/abs/2109.11987),[pdf](https://will62794.github.io/assets/papers/cpp22-formal-verification-reconfig.pdf),[code](https://github.com/will62794/logless-reconfig/tree/master]),[talk](https://youtu.be/VwCBlmS7XEA)]
 * Plain and Simple Inductive Invariant Inference for Distributed Protocols in TLA+, Draft 2022 [[pdf](https://will62794.github.io/assets/papers/dist-invariant-inference-tla.pdf)]
+* Towards Formal Verification of HotStuff-based Byzantine Fault Tolerant Consensus in Agda, NFM 2022 [[arxiv](https://arxiv.org/abs/2203.14711)]
 
 ### Quorum systems
 This section lists papers on quorum systems.
@@ -544,6 +546,7 @@ This section lists papers on [Byzantine Fault Tolerance](https://en.wikipedia.or
   * BFT-SMR implementation, similar to PBFT. Often used as a benchmark against which new BFT protocols are evaluated.
 * The Next 700 BFT Protocols, TOCS 2015 [[acmdl](https://dl.acm.org/citation.cfm?id=2658994),[pdf](http://www.vukolic.com/700-Eurosys.pdf)]
 * Algorand: Scaling Byzantine Agreements for Cryptocurrencies, SOSP 2017 [[acmdl](https://dl.acm.org/doi/10.1145/3132747.3132757),[pdf](https://people.csail.mit.edu/nickolai/papers/gilad-algorand-eprint.pdf)]
+* Hybrids on Steroids: SGX-Based High Performance BFT, Eurosys 2017 [[acmdl](https://dl.acm.org/doi/10.1145/3064176.3064213),[pdf](https://www4.cs.fau.de/Publications/2017/behl_17_eurosys.pdf)]
 * Hardening Cassandra Against Byzantine Failures, OPODIS 2017 [[pdf](http://drops.dagstuhl.de/opus/volltexte/2018/8642/pdf/LIPIcs-OPODIS-2017-27.pdf)]
 * Casper the Friendly Finality Gadget, Tech report 2017 [[arxiv](https://arxiv.org/abs/1710.09437)]
   * Casper FFG, the proposed PoS alternative for [Ethereum](https://ethereum.org/en/) (aka [Eth2](https://ethereum.org/en/eth2/))
@@ -583,6 +586,7 @@ This section lists papers on [Byzantine Fault Tolerance](https://en.wikipedia.or
 * Narwhal and Tusk: A DAG-based Mempool and Efficient BFT Consensus, Eurosys 2022 [[acmdl](https://dl.acm.org/doi/pdf/10.1145/3492321.3519594)]
 * UTT: Decentralized Ecash with Accountable Privacy, Preprint 2022 [[pdf](https://eprint.iacr.org/2022/452.pdf)]
 * Treaty: Secure Distributed Transactions, DSN 2022 [[pdf](https://dse.in.tum.de/wp-content/uploads/2022/04/Treaty_PDFExpress.pdf)]
+* SplitBFT: Improving Byzantine Fault Tolerance Safety Using Trusted Compartments, Middleware 2022 [[acmdl]](https://dl.acm.org/doi/abs/10.1145/3528535.3531516),[arxiv](https://arxiv.org/abs/2205.08938)]
 
 ### Alternative fault models in distributed consensus
 Most of these papers handle crash faults or byzantine faults. This section considers the fault models between crash and byzantine.
@@ -689,6 +693,7 @@ They are in no particular order.
 * [Hot Topics in Edge Computing (HotEdge)](https://www.usenix.org/conference/hotedge19)
 * [Distributed Cloud Computing (DCC)](http://www.disc-conference.org/wp/dcc2019/)
 * [High Performance Transaction Systems (HPTS)](http://www.hpts.ws)
+* [ConsensusDay](https://research.protocol.ai/sites/consensusday22/)
 
 ### Academic journals & magazines
 * ACM

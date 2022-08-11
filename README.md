@@ -137,6 +137,7 @@ This section lists papers describing algorithms for distributed consensus. These
   * Consensus algorithm which permits multiple proposals in the same round (similar to Fast Paxos) but uses two phases instead of larger quorums.
 * Paxos Made Practical, Unpublished [[pdf](http://www.scs.stanford.edu/~dm/home/papers/paxos.pdf)]
 * Relaxed Paxos: Quorum intersection revisited (again), PaPoC 2022 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3517209.3524040),[arvix](https://arxiv.org/abs/2203.03058)]
+* Live SMR in partitionable networks [[pdf](https://jcsd2022.networks.imdea.org/wp-content/uploads/sites/20/2022/06/01-live-smr-in-partitionable-networks.pdf)]
 
 ### Consensus for specialist hardware
 This section lists papers describing consensus algorithms using specialist hardware such as [SDN](https://en.wikipedia.org/wiki/Software-defined_networking), [IP-multicast](https://en.wikipedia.org/wiki/IP_multicast), or [RDMA](https://en.wikipedia.org/wiki/Remote_direct_memory_access).
@@ -372,6 +373,7 @@ This section lists papers that discuss alternative consistency models to [linear
   * Featured in [the morning paper](https://blog.acolyer.org/2019/03/27/amazon-aurora-on-avoiding-distributed-consensus-for-i-os-commits-and-membership-changes/)
 * Sharding the Shards: Managing Datastore Locality at Scale with Akkio, OSDI 2018 [[acmdl](https://dl.acm.org/citation.cfm?id=3291201),[pdf](https://www.usenix.org/system/files/osdi18-annamalai.pdf)]
   * Featured in [the morning paper](https://blog.acolyer.org/2018/11/05/sharding-the-shards-managing-datastore-locality-at-scale-with-akkio/)
+* Tunable Consistency in MongoDB, VLDB 2019 [[pdf](http://www.vldb.org/pvldb/vol12/p2071-schultz.pdf)]
 * On mixing eventual and strong consistency: Bayou revisited, PODC 2019 [[arxiv](https://arxiv.org/abs/1905.11762),[pdf](https://dl.acm.org/citation.cfm?id=3331583)]
 * Harmonia: Near-Linear Scalability for Replicated Storage with In-Network Conflict Detection, VLDB 2020 [[pdf](https://drkp.net/papers/harmonia-vldb20.pdf)]
   * Implemented on programmable switches
@@ -401,6 +403,7 @@ This section lists papers that analyze and/or handle real-world failures of dist
 * Metastable Failures in Distributed Systems, HotOS 2021 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3458336.3465286)]
 * Immunizing Systems from Distant Failures by Limiting Lamport Exposure, HotNets 2021 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3484266.3487387)]
 * Cores That Don’t Count, HotOS 2021 [[acmdl](https://dl.acm.org/doi/10.1145/3458336.3465297),[pdf](https://sigops.org/s/conferences/hotos/2021/papers/hotos21-s01-hochschild.pdf),[talk](https://youtu.be/QMF3rqhjYuM)]
+* Metastable Failures in the Wild, OSDI 2022 [[pdf](https://www.usenix.org/system/files/osdi22-huang-lexiang.pdf)]
 
 ### Clocks
 The liveness of distributed consensus depends on some degree of clock synchronization. The following section lists papers on the topic of clock synchronization.
@@ -453,6 +456,7 @@ This section lists papers on proving or testing the correctness of consensus alg
   * Formal proofs of distributed protocols in Coq including Multi-Paxos, produces verified C executables.
 * Adore: Atomic Distributed Objects with Certified Reconfiguration, PLDI 2022 [[pdf](https://flint.cs.yale.edu/flint/publications/adore.pdf)]
 * Formal Verification of a Distributed Dynamic Reconfiguration Protocol, CCP 2022 [[acmdl](https://dl.acm.org/doi/abs/10.1145/3497775.3503688),[arxiv](https://arxiv.org/abs/2109.11987),[pdf](https://will62794.github.io/assets/papers/cpp22-formal-verification-reconfig.pdf),[code](https://github.com/will62794/logless-reconfig/tree/master]),[talk](https://youtu.be/VwCBlmS7XEA)]
+  * Also see: Design and Analysis of a Logless Dynamic Reconfiguration Protocol, OPODIS 2021 [[pdf](https://will62794.github.io/assets/papers/LIPIcs-OPODIS-2021-26.pdf)]
 * Plain and Simple Inductive Invariant Inference for Distributed Protocols in TLA+, Draft 2022 [[pdf](https://will62794.github.io/assets/papers/dist-invariant-inference-tla.pdf)]
 * Towards Formal Verification of HotStuff-based Byzantine Fault Tolerant Consensus in Agda, NFM 2022 [[arxiv](https://arxiv.org/abs/2203.14711)]
 
